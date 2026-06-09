@@ -7,6 +7,7 @@ import csv
 ssl._create_default_https_context = ssl._create_unverified_context #Bypasses SSL certificate verification
 
 htmldata = urlopen('https://www.geeksforgeeks.org/') #Opens URL and gathers HTML data
+#see geeks4geeks_requests.py for explanation of following code
 soup = BeautifulSoup(htmldata, 'html.parser')
 
 with open('g4g_urllib.csv', 'w', newline='') as f:
